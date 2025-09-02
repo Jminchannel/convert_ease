@@ -31,26 +31,43 @@ class ApiService {
   }
 
 
-  Future<Map<String, dynamic>> _getSingleRate(String from, String to,double money) async {
+  Future<Map<String, dynamic>> getSingleRate(String from, String to,double money) async {
     final url = '$_exchangeUrl?from=$from&to=$to&money=${money}&token=$_token';
     final response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
       if (data['success'] == true) {
-        final List<dynamic> dataList = data['data'];
-        final result = dataList.map((data) {
+        dynamic apiData = data['data'];
+        
+        // 处理API返回的不同数据结构
+        if (apiData is List) {
+          // 如果返回的是List，取第一个元素
+          final result = apiData.map((item) {
+            return {
+              'exchange': item['exchange']?.toString() ?? '',
+              'exchange_from': item['exchange_from']?.toString() ?? '',
+              'exchange_to': item['exchange_to']?.toString() ?? '',
+              'exchange_round': item['exchange_round']?.toString() ?? '',
+              'currency_money': item['currency_money']?.toString() ?? '',
+              'update_time': item['update_time']?.toString() ?? '',
+            };
+          }).toList();
+          return {'result': result};
+        } else if (apiData is Map) {
+          // 如果返回的是Map，直接处理
           return {
-            'exchange': data['exchange'].toString(),
-            'exchange_from': data['exchange_from'].toString(),
-            'exchange_to': data['exchange_to'].toString(),
-            'exchange_round': data['exchange_round'].toString(),
-            'currency_money': data['currency_money'].toString(),
-            'update_time': data['update_time'].toString(),
+            'result': [{
+              'exchange': apiData['exchange']?.toString() ?? '',
+              'exchange_from': apiData['exchange_from']?.toString() ?? '',
+              'exchange_to': apiData['exchange_to']?.toString() ?? '',
+              'exchange_round': apiData['exchange_round']?.toString() ?? '',
+              'currency_money': apiData['currency_money']?.toString() ?? '',
+              'update_time': apiData['update_time']?.toString() ?? '',
+            }]
           };
-        }).toList();
-        return {
-          'result': result
-        };
+        } else {
+          throw Exception('Unexpected data format from API');
+        }
       } else {
         throw Exception('Failed to get rate: ${data['message']}');
       }

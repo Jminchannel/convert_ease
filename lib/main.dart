@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'core/constants/app_constants.dart';
 import 'core/theme/app_theme.dart';
+import 'core/theme/theme_manager.dart';
 import 'routes/app_routes.dart';
 import 'ui/main_screen.dart';
 import 'ui/splash_screen.dart';
@@ -19,13 +20,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: AppInfo.appName,
-      theme: AppTheme.lightTheme,
-      initialRoute: AppRouter.initialRoute,
-      routes: AppRouter.getRoutes(),
-      onGenerateRoute: AppRouter.onGenerateRoute,
+    return ValueListenableBuilder<ThemeData>(
+      valueListenable: themeManager,
+      builder: (context, theme, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: AppInfo.appName,
+          theme: theme,
+          darkTheme: AppTheme.darkTheme,
+          themeMode: themeManager.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+          initialRoute: AppRouter.initialRoute,
+          routes: AppRouter.getRoutes(),
+          onGenerateRoute: AppRouter.onGenerateRoute,
+        );
+      },
     );
   }
 }

@@ -15,7 +15,7 @@ class AppColors {
 
   /// 主要颜色
   static const Color primary = Colors.deepPurple;
-  static Color primaryLight = Colors.deepPurple[200]!;
+  static Color primaryLight = Colors.grey[300]!;
 
   /// 文本颜色
   static const Color textPrimary = Colors.white;
