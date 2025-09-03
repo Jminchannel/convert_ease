@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 /// 应用程序基本信息
 class AppInfo {
   static const String appName = 'Convert Ease';
-  static const String appDescription = '一个强大的转换工具应用';
+  static const String appDescription = 'A powerful conversion tool application.';
 }
 
 /// 颜色常量
@@ -89,6 +89,6 @@ class AppRoutes {
 class AppStrings {
   AppStrings._(); // 防止实例化
 
-  static const String welcomeMessage = '欢迎使用 Convert Ease！\n\n这里可以放置您的转换工具。';
+  static const String welcomeMessage = 'Welcome to Convert Ease！\n\nHere you can place your conversion tool.';
   static const String versionPrefix = 'v';
 }

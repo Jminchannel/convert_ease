@@ -1,0 +1,461 @@
+{
+  "@@locale": "en",
+  "appTitle": "ConvertEase",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "selectCategory": "Select a conversion category",
+  "@selectCategory": {
+    "description": "Text for selecting a category"
+  },
+  "converter": "Converter",
+  "@converter": {
+    "description": "Converter text"
+  },
+  "loading": "Loading...",
+  "@loading": {
+    "description": "Loading text"
+  },
+  "enterColorValue": "Enter color value",
+  "@enterColorValue": {
+    "description": "Enter color value text"
+  },
+  "enterValueToConvert": "Enter value to convert",
+  "@enterValueToConvert": {
+    "description": "Enter value to convert text"
+  },
+  "pleaseEnterValue": "Please enter a value",
+  "@pleaseEnterValue": {
+    "description": "Please enter a value text"
+  },
+  "selectUnits": "Select Units",
+  "@selectUnits": {
+    "description": "Select units text"
+  },
+  "from": "From",
+  "@from": {
+    "description": "From text"
+  },
+  "to": "To",
+  "@to": {
+    "description": "To text"
+  },
+  "convert": "Convert",
+  "@convert": {
+    "description": "Convert button text"
+  },
+  "result": "Result",
+  "@result": {
+    "description": "Result text"
+  },
+  "waitingForInput": "Waiting for input...",
+  "@waitingForInput": {
+    "description": "Waiting for input text"
+  },
+  "resultCopied": "Result copied to clipboard",
+  "@resultCopied": {
+    "description": "Result copied message"
+  },
+  "unit": "Unit",
+  "@unit": {
+    "description": "Unit text"
+  },
+  "currency": "Currency",
+  "@currency": {
+    "description": "Currency text"
+  },
+  "units": "units",
+  "@units": {
+    "description": "Units text"
+  },
+  "showMore": "Show More",
+  "@showMore": {
+    "description": "Show more text"
+  },
+  "showLess": "Show Less",
+  "@showLess": {
+    "description": "Show less text"
+  },
+  "hiding": "Hiding {count} categories",
+  "@hiding": {
+    "description": "Hiding categories text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "moreCategories": "+{count} more",
+  "@moreCategories": {
+    "description": "More categories text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings text"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Language text"
+  },
+  "selectLanguage": "Select Language",
+  "@selectLanguage": {
+    "description": "Select language text"
+  },
+  "english": "English",
+  "@english": {
+    "description": "English language name"
+  },
+  "chinese": "简体中文",
+  "@chinese": {
+    "description": "Chinese language name"
+  },
+  "traditionalChinese": "繁體中文",
+  "@traditionalChinese": {
+    "description": "Traditional Chinese language name"
+  },
+  "indonesian": "Bahasa Indonesia",
+  "@indonesian": {
+    "description": "Indonesian language name"
+  },
+  "languageChanged": "Language changed successfully",
+  "@languageChanged": {
+    "description": "Language changed message"
+  },
+  "theme": "Theme",
+  "@theme": {
+    "description": "Theme text"
+  },
+  "darkMode": "Dark Mode",
+  "@darkMode": {
+    "description": "Dark mode text"
+  },
+  "lightMode": "Light Mode",
+  "@lightMode": {
+    "description": "Light mode text"
+  },
+  "about": "About",
+  "@about": {
+    "description": "About text"
+  },
+  "appName": "App Name",
+  "@appName": {
+    "description": "App name text"
+  },
+  "version": "Version",
+  "@version": {
+    "description": "Version text"
+  },
+  "buildNumber": "Build Number",
+  "@buildNumber": {
+    "description": "Build number text"
+  },
+  "developer": "Developer",
+  "@developer": {
+    "description": "Developer text"
+  },
+  "appDescription": "A powerful and beautiful unit conversion app\nsupporting multiple categories and languages.",
+  "@appDescription": {
+    "description": "App description text"
+  },
+  "themeSwitchingComingSoon": "Theme switching coming soon!",
+  "@themeSwitchingComingSoon": {
+    "description": "Theme switching coming soon message"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "Home tab label"
+  },
+  "history": "History",
+  "@history": {
+    "description": "History tab label"
+  },
+  "favorites": "Favorites",
+  "@favorites": {
+    "description": "Favorites tab label"
+  },
+  "conversionHistory": "Conversion History",
+  "@conversionHistory": {
+    "description": "Conversion history title"
+  },
+  "clearAll": "Clear All",
+  "@clearAll": {
+    "description": "Clear all button"
+  },
+  "clearAllHistory": "Clear All History",
+  "@clearAllHistory": {
+    "description": "Clear all history dialog title"
+  },
+  "clearAllHistoryConfirm": "Are you sure you want to delete all conversion history?",
+  "@clearAllHistoryConfirm": {
+    "description": "Clear all history confirmation message"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "noConversionHistory": "No Conversion History",
+  "@noConversionHistory": {
+    "description": "No history message title"
+  },
+  "historyWillAppearHere": "Your conversion history will appear here",
+  "@historyWillAppearHere": {
+    "description": "History placeholder text"
+  },
+  "category": "Category",
+  "@category": {
+    "description": "Category label"
+  },
+  "time": "Time",
+  "@time": {
+    "description": "Time label"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Delete button tooltip"
+  },
+  "favoritesComingSoon": "Favorites feature coming soon!",
+  "@favoritesComingSoon": {
+    "description": "Favorites coming soon message"
+  },
+  "failedToLoadCurrencies": "Failed to load currencies",
+  "@failedToLoadCurrencies": {
+    "description": "Currency loading error"
+  },
+  "failedToLoadHistory": "Failed to load history",
+  "@failedToLoadHistory": {
+    "description": "History loading error"
+  },
+  "exchangeFailed": "Exchange failed",
+  "@exchangeFailed": {
+    "description": "Exchange failure error"
+  },
+  "invalidResult": "Invalid result format",
+  "@invalidResult": {
+    "description": "Invalid result error"
+  },
+  "noResult": "No result",
+  "@noResult": {
+    "description": "No result message"
+  },
+  "error": "Error",
+  "@error": {
+    "description": "Generic error label"
+  },
+  "conversionNotImplemented": "Conversion not implemented yet",
+  "@conversionNotImplemented": {
+    "description": "Conversion not implemented message"
+  },
+  "invalidColorFormat": "Invalid color format",
+  "@invalidColorFormat": {
+    "description": "Invalid color format error"
+  },
+  "invalidHexFormat": "Invalid hex format",
+  "@invalidHexFormat": {
+    "description": "Invalid hex format error"
+  },
+  "invalidRgbFormat": "Invalid RGB format",
+  "@invalidRgbFormat": {
+    "description": "Invalid RGB format error"
+  },
+  "rateUpdatedRecently": "Rate updated recently",
+  "@rateUpdatedRecently": {
+    "description": "Recent rate update message"
+  },
+  "rateUpdatedJustNow": "Rate updated just now",
+  "@rateUpdatedJustNow": {
+    "description": "Just now rate update"
+  },
+  "rateUpdatedMinutesAgo": "Rate updated {minutes} minute{plural} ago",
+  "@rateUpdatedMinutesAgo": {
+    "description": "Minutes ago rate update",
+    "placeholders": {
+      "minutes": {"type": "int"},
+      "plural": {"type": "String"}
+    }
+  },
+  "rateUpdatedHoursAgo": "Rate updated {hours} hour{plural} ago",
+  "@rateUpdatedHoursAgo": {
+    "description": "Hours ago rate update",
+    "placeholders": {
+      "hours": {"type": "int"},
+      "plural": {"type": "String"}
+    }
+  },
+  "rateUpdatedDaysAgo": "Rate updated {days} day{plural} ago",
+  "@rateUpdatedDaysAgo": {
+    "description": "Days ago rate update",
+    "placeholders": {
+      "days": {"type": "int"},
+      "plural": {"type": "String"}
+    }
+  },
+  "rateUpdatedAt": "Rate updated at: {time}",
+  "@rateUpdatedAt": {
+    "description": "Rate updated at specific time",
+    "placeholders": {
+      "time": {"type": "String"}
+    }
+  },
+  "categoryLength": "Length",
+  "@categoryLength": {
+    "description": "Length category name"
+  },
+  "categoryArea": "Area",
+  "@categoryArea": {
+    "description": "Area category name"
+  },
+  "categoryVolume": "Volume",
+  "@categoryVolume": {
+    "description": "Volume category name"
+  },
+  "categoryWeight": "Weight",
+  "@categoryWeight": {
+    "description": "Weight category name"
+  },
+  "categoryTemperature": "Temperature",
+  "@categoryTemperature": {
+    "description": "Temperature category name"
+  },
+  "categoryStorage": "Storage",
+  "@categoryStorage": {
+    "description": "Storage category name"
+  },
+  "categorySpeed": "Speed",
+  "@categorySpeed": {
+    "description": "Speed category name"
+  },
+  "categoryColor": "Color",
+  "@categoryColor": {
+    "description": "Color category name"
+  },
+  "categoryEnergy": "Energy",
+  "@categoryEnergy": {
+    "description": "Energy category name"
+  },
+  "categoryPressure": "Pressure",
+  "@categoryPressure": {
+    "description": "Pressure category name"
+  },
+  "categoryAngle": "Angle",
+  "@categoryAngle": {
+    "description": "Angle category name"
+  },
+  "conversionHistoryEmpty": "No conversion history yet",
+  "@conversionHistoryEmpty": {
+    "description": "Message shown when history is empty"
+  },
+  "startConverting": "Start converting to see your history here",
+  "@startConverting": {
+    "description": "Subtitle for empty history"
+  },
+  "deleteItem": "Delete Item",
+  "@deleteItem": {
+    "description": "Delete item confirmation title"
+  },
+  "deleteItemConfirm": "Are you sure you want to delete this item?",
+  "@deleteItemConfirm": {
+    "description": "Delete item confirmation message"
+  },
+  "appSubtitle": "A Powerful Unit Converter",
+  "@appSubtitle": {
+    "description": "App subtitle description"
+  },
+  "darkModeTitle": "Dark Mode",
+  "@darkModeTitle": {
+    "description": "Dark mode setting title"
+  },
+  "darkModeSubtitle": "Enable eye-friendly dark theme",
+  "@darkModeSubtitle": {
+    "description": "Dark mode setting subtitle"
+  },
+  "accentColor": "Accent Color",
+  "@accentColor": {
+    "description": "Accent color setting title"
+  },
+  "colorPicker": "Color Picker",
+  "@colorPicker": {
+    "description": "Color picker title"
+  },
+  "selectColor": "Select Color",
+  "@selectColor": {
+    "description": "Select color button text"
+  },
+  "chooseFromPalette": "Choose from Palette",
+  "@chooseFromPalette": {
+    "description": "Choose from color palette text"
+  },
+  "colorSelected": "Color selected",
+  "@colorSelected": {
+    "description": "Color selected confirmation message"
+  },
+  "pickColor": "Pick Color",
+  "@pickColor": {
+    "description": "Pick color button text"
+  },
+  "useSelectedColor": "Use Selected Color",
+  "@useSelectedColor": {
+    "description": "Use selected color button text"
+  },
+  "unitMeters": "Meters",
+  "unitFeet": "Feet",
+  "unitInches": "Inches",
+  "unitCentimeters": "Centimeters",
+  "unitYards": "Yards",
+  "unitMiles": "Miles",
+  "unitSquareMeters": "Square Meters",
+  "unitSquareFeet": "Square Feet",
+  "unitSquareInches": "Square Inches",
+  "unitAcres": "Acres",
+  "unitHectares": "Hectares",
+  "unitLiters": "Liters",
+  "unitGallons": "Gallons",
+  "unitMilliliters": "Milliliters",
+  "unitCubicMeters": "Cubic Meters",
+  "unitCubicFeet": "Cubic Feet",
+  "unitKg": "Kg",
+  "unitPounds": "Pounds",
+  "unitOunces": "Ounces",
+  "unitGrams": "Grams",
+  "unitTons": "Tons",
+  "unitByte": "Byte",
+  "unitBit": "bit",
+  "unitKB": "KB",
+  "unitMB": "MB",
+  "unitGB": "GB",
+  "unitTB": "TB",
+  "unitSecond": "Second",
+  "unitMinute": "Minute",
+  "unitHour": "Hour",
+  "unitDay": "Day",
+  "unitWeek": "Week",
+  "unitYear": "Year",
+  "unitMs": "m/s",
+  "unitKmh": "km/h",
+  "unitMph": "mph",
+  "unitKnot": "knot",
+  "unitMach": "Mach",
+  "unitJoule": "Joule",
+  "unitCalorie": "Calorie",
+  "unitKilocalorie": "Kilocalorie",
+  "unitKWh": "kWh",
+  "unitPascal": "Pascal",
+  "unitBar": "Bar",
+  "unitPSI": "PSI",
+  "unitAtmosphere": "Atmosphere",
+  "unitDegree": "Degree",
+  "unitRadian": "Radian",
+  "unitGradian": "Gradian",
+  "unitCelsius": "°C",
+  "unitFahrenheit": "°F",
+  "unitKelvin": "Kelvin",
+  "unitHEX": "HEX",
+  "unitRGBA": "RGB(A)",
+  "unitHSLA": "HSL(A)",
+  "unitHSV": "HSV",
+  "unitCMYK": "CMYK"
+}

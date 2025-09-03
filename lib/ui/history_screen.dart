@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../models/conversion_history.dart';
 import '../services/history_service.dart';
+import '../widgets/animated_background.dart';
+import '../generated/app_localizations.dart';
 
 class HistoryScreen extends StatefulWidget {
   const HistoryScreen({super.key});
@@ -36,7 +38,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
       });
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Failed to load history: $e')),
+          SnackBar(content: Text('${AppLocalizations.of(context)!.failedToLoadHistory}: $e')),
         );
       }
     }
@@ -48,19 +50,20 @@ class _HistoryScreenState extends State<HistoryScreen> {
   }
 
   Future<void> _clearAllHistory() async {
+    final l10n = AppLocalizations.of(context)!;
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Clear All History'),
-        content: const Text('Are you sure you want to delete all conversion history?'),
+        title: Text(l10n.clearAllHistory),
+        content: Text(l10n.clearAllHistoryConfirm),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
           TextButton(
             onPressed: () => Navigator.of(context).pop(true),
-            child: const Text('Clear All'),
+            child: Text(l10n.clearAll),
           ),
         ],
       ),
@@ -74,32 +77,109 @@ class _HistoryScreenState extends State<HistoryScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+    
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Conversion History'),
-        actions: [
-          if (_history.isNotEmpty)
-            IconButton(
-              icon: const Icon(Icons.delete_sweep),
-              onPressed: _clearAllHistory,
-              tooltip: 'Clear All',
+      backgroundColor: Colors.transparent,
+      body: AnimatedBackground(
+        colors: isDark
+            ? [
+                Colors.deepPurple.shade800,
+                Colors.indigo.shade700,
+                Colors.blue.shade600,
+              ]
+            : [
+                Colors.deepPurple.shade300,
+                Colors.blue.shade200,
+                Colors.cyan.shade100,
+              ],
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: isDark 
+                  ? [
+                      Colors.transparent,
+                      theme.scaffoldBackgroundColor.withValues(alpha: 0.6),
+                      theme.scaffoldBackgroundColor.withValues(alpha: 0.8),
+                    ]
+                  : [
+                      Colors.transparent,
+                      Colors.white.withValues(alpha: 0.2),
+                      Colors.white.withValues(alpha: 0.7),
+                    ],
             ),
-        ],
-      ),
-      body: _isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : _history.isEmpty
-              ? _buildEmptyState()
-              : RefreshIndicator(
-                  onRefresh: _loadHistory,
-                  child: ListView.builder(
-                    padding: const EdgeInsets.all(8.0),
-                    itemCount: _history.length,
-                    itemBuilder: (context, index) {
-                      return _buildHistoryCard(_history[index]);
-                    },
+          ),
+          child: SafeArea(
+            child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.fromLTRB(20, 100, 20, 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          AppLocalizations.of(context)!.conversionHistory,
+                          style: TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            color: isDark ? Colors.white : Colors.black87,
+                            shadows: const [
+                              Shadow(
+                                offset: Offset(0, 2),
+                                blurRadius: 4,
+                                color: Colors.black26,
+                              ),
+                            ],
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      if (_history.isNotEmpty)
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.red.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                              color: Colors.red.withValues(alpha: 0.3),
+                              width: 1,
+                            ),
+                          ),
+                          child: IconButton(
+                            icon: const Icon(Icons.delete_sweep, color: Colors.red),
+                            onPressed: _clearAllHistory,
+                            tooltip: AppLocalizations.of(context)!.clearAll,
+                          ),
+                        ),
+                    ],
                   ),
                 ),
+                Expanded(
+                  child: _isLoading
+                      ? const Center(child: CircularProgressIndicator())
+                      : _history.isEmpty
+                          ? _buildEmptyState()
+                          : RefreshIndicator(
+                              onRefresh: _loadHistory,
+                              child: ListView.builder(
+                                padding: const EdgeInsets.all(8.0),
+                                itemCount: _history.length,
+                                itemBuilder: (context, index) {
+                                  return _buildHistoryCard(_history[index]);
+                                },
+                              ),
+                            ),
+                ),
+              ],
+            ),
+          ),
+        ),
+    )
     );
   }
 
@@ -115,14 +195,14 @@ class _HistoryScreenState extends State<HistoryScreen> {
           ),
           const SizedBox(height: 16),
           Text(
-            'No Conversion History',
+            AppLocalizations.of(context)!.noConversionHistory,
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
               color: Colors.grey[600],
             ),
           ),
           const SizedBox(height: 8),
           Text(
-            'Your conversion history will appear here',
+            AppLocalizations.of(context)!.historyWillAppearHere,
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: Colors.grey[500],
             ),
@@ -150,8 +230,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Category: ${history.category}'),
-            Text('Time: ${history.formattedTime}'),
+            Text('${AppLocalizations.of(context)!.category}: ${history.category}'),
+            Text('${AppLocalizations.of(context)!.time}: ${history.formattedTime}'),
             if (history.updateTime != null)
               Text(
                 history.updateTime!,
@@ -166,7 +246,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
         trailing: IconButton(
           icon: const Icon(Icons.delete, color: Colors.red),
           onPressed: () => _deleteHistory(history.id),
-          tooltip: 'Delete',
+          tooltip: AppLocalizations.of(context)!.delete,
         ),
         isThreeLine: true,
       ),

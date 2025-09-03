@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../core/constants/app_constants.dart';
 import '../core/theme/theme_manager.dart';
+import '../generated/app_localizations.dart';
+import '../providers/language_provider.dart';
 import 'favour_screen.dart';
 import 'history_screen.dart';
 import 'home_screen.dart';
@@ -20,12 +23,14 @@ class _MainScreenState extends State<MainScreen>{
   int _currentIndex = 0;
   final PageController _pageController = PageController();
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  final List<Widget> _pages = [
-    const HomeScreen(),
-    const HistoryScreen(),
-    const FavourScreen(),
-    const SettingsScreen(),
-  ];
+  
+  List<Widget> _getPages(LanguageProvider languageProvider) {
+    return [
+      const HomeScreen(),
+      const HistoryScreen(),
+      SettingsScreen(languageProvider: languageProvider),
+    ];
+  }
   @override
   void initState() {
     super.initState();
@@ -52,31 +57,75 @@ class _MainScreenState extends State<MainScreen>{
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // 通过 _scaffoldKey 可以直接调用 Scaffold 的各种方法
-      key: _scaffoldKey,
-      drawer: _buildDrawer(),
-      appBar: AppBar(
-        leading: IconButton(
-            onPressed: _openDrawer,
-            icon: const Icon(Icons.menu)
-        ),
-        foregroundColor: Colors.black,
-      ),
-      body: PageView(
-        controller: _pageController,
-        physics: const ClampingScrollPhysics(),
-        children: _pages,
-        onPageChanged: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-      ),
-      bottomNavigationBar: _buildBottomNavigationBar(),
+    return Consumer<LanguageProvider>(
+      builder: (context, languageProvider, child) {
+        final l10n = AppLocalizations.of(context)!;
+        final pages = _getPages(languageProvider);
+        
+        return Scaffold(
+          // 通过 _scaffoldKey 可以直接调用 Scaffold 的各种方法
+          key: _scaffoldKey,
+          backgroundColor: Colors.transparent,
+          extendBodyBehindAppBar: true,
+          drawer: _buildDrawer(l10n),
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            leading: Container(
+              margin: const EdgeInsets.all(8.0),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.2),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: Colors.white.withValues(alpha: 0.3),
+                  width: 1,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.1),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: IconButton(
+                onPressed: _openDrawer,
+                icon: const Icon(
+                  Icons.menu,
+                  color: Colors.white,
+                ),
+                splashRadius: 20,
+              ),
+            ),
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.black.withValues(alpha: 0.1),
+                    Colors.transparent,
+                  ],
+                ),
+              ),
+            ),
+          ),
+          body: PageView(
+            controller: _pageController,
+            physics: const ClampingScrollPhysics(),
+            children: pages,
+            onPageChanged: (index) {
+              setState(() {
+                _currentIndex = index;
+              });
+            },
+          ),
+          bottomNavigationBar: _buildBottomNavigationBar(l10n),
+        );
+      },
     );
   }
-  Widget _buildDrawer() {
+  Widget _buildDrawer(AppLocalizations l10n) {
     return Drawer(
       child: Column(
         children: [
@@ -111,7 +160,7 @@ class _MainScreenState extends State<MainScreen>{
     );
   }
 
-  BottomNavigationBar _buildBottomNavigationBar() {
+  BottomNavigationBar _buildBottomNavigationBar(AppLocalizations l10n) {
     return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
@@ -124,22 +173,18 @@ class _MainScreenState extends State<MainScreen>{
                 curve: Curves.easeInOut);
           });
         },
-        items: const [
+        items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'home'
+              icon: const Icon(Icons.home),
+              label: l10n.home
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.history),
-              label: 'history'
+              icon: const Icon(Icons.history),
+              label: l10n.history
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.favorite),
-              label: 'favour'
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'settings'
+              icon: const Icon(Icons.settings),
+              label: l10n.settings
           )
         ]
     );
@@ -162,19 +207,28 @@ class _MainScreenState extends State<MainScreen>{
             ),
           ),
           const SizedBox(height: 16),
-          Text(
-            'Convert Ease',
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            'A Powerful Unit Converter',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: Colors.white70,
-            ),
+          Consumer<LanguageProvider>(
+            builder: (context, languageProvider, child) {
+              final l10n = AppLocalizations.of(context)!;
+              return Column(
+                children: [
+                  Text(
+                    l10n.appTitle,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    l10n.appSubtitle,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Colors.white70,
+                    ),
+                  ),
+                ],
+              );
+            },
           ),
         ],
       ),
@@ -187,16 +241,21 @@ class _MainScreenState extends State<MainScreen>{
       builder: (context, theme, child) {
         return Column(
           children: [
-            SwitchListTile(
-              title: const Text('Dark Mode'),
-              subtitle: const Text('Enable eye-friendly dark theme'),
-              value: themeManager.isDarkMode,
-              onChanged: (value) {
-                themeManager.setThemeMode(value);
+            Consumer<LanguageProvider>(
+              builder: (context, languageProvider, child) {
+                final l10n = AppLocalizations.of(context)!;
+                return SwitchListTile(
+                  title: Text(l10n.darkModeTitle),
+                  subtitle: Text(l10n.darkModeSubtitle),
+                  value: themeManager.isDarkMode,
+                  onChanged: (value) {
+                    themeManager.setThemeMode(value);
+                  },
+                  secondary: Icon(
+                    themeManager.isDarkMode ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
+                  ),
+                );
               },
-              secondary: Icon(
-                themeManager.isDarkMode ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
-              ),
             ),
             const SizedBox(height: 16),
             Padding(
@@ -204,7 +263,12 @@ class _MainScreenState extends State<MainScreen>{
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   Text('Accent Color', style: Theme.of(context).textTheme.titleMedium),
+                   Consumer<LanguageProvider>(
+                    builder: (context, languageProvider, child) {
+                      final l10n = AppLocalizations.of(context)!;
+                      return Text(l10n.accentColor, style: Theme.of(context).textTheme.titleMedium);
+                    },
+                  ),
                    const SizedBox(height: 16),
                   _buildColorSelector(),
                 ],

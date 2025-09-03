@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import '../generated/app_localizations.dart';
 
 class Category {
   final String name;
@@ -14,6 +15,40 @@ class Category {
     required this.units,
     required this.color,
   });
+
+  /// 获取本地化的分类名称
+  String getLocalizedName(AppLocalizations l10n) {
+    switch (name) {
+      case 'Length':
+        return l10n.categoryLength;
+      case 'Area':
+        return l10n.categoryArea;
+      case 'Volume':
+        return l10n.categoryVolume;
+      case 'Weight':
+        return l10n.categoryWeight;
+      case 'Temperature':
+        return l10n.categoryTemperature;
+      case 'Storage':
+        return l10n.categoryStorage;
+      case 'Time':
+        return l10n.time;
+      case 'Speed':
+        return l10n.categorySpeed;
+      case 'Color':
+        return l10n.categoryColor;
+      case 'Currency':
+        return l10n.currency;
+      case 'Energy':
+        return l10n.categoryEnergy;
+      case 'Pressure':
+        return l10n.categoryPressure;
+      case 'Angle':
+        return l10n.categoryAngle;
+      default:
+        return name;
+    }
+  }
 }
 List<Category> categories = [
   Category(
