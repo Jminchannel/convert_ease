@@ -664,6 +664,348 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Use Selected Color'**
   String get useSelectedColor;
+
+  /// No description provided for @unitMeters.
+  ///
+  /// In en, this message translates to:
+  /// **'Meters'**
+  String get unitMeters;
+
+  /// No description provided for @unitFeet.
+  ///
+  /// In en, this message translates to:
+  /// **'Feet'**
+  String get unitFeet;
+
+  /// No description provided for @unitInches.
+  ///
+  /// In en, this message translates to:
+  /// **'Inches'**
+  String get unitInches;
+
+  /// No description provided for @unitCentimeters.
+  ///
+  /// In en, this message translates to:
+  /// **'Centimeters'**
+  String get unitCentimeters;
+
+  /// No description provided for @unitYards.
+  ///
+  /// In en, this message translates to:
+  /// **'Yards'**
+  String get unitYards;
+
+  /// No description provided for @unitMiles.
+  ///
+  /// In en, this message translates to:
+  /// **'Miles'**
+  String get unitMiles;
+
+  /// No description provided for @unitSquareMeters.
+  ///
+  /// In en, this message translates to:
+  /// **'Square Meters'**
+  String get unitSquareMeters;
+
+  /// No description provided for @unitSquareFeet.
+  ///
+  /// In en, this message translates to:
+  /// **'Square Feet'**
+  String get unitSquareFeet;
+
+  /// No description provided for @unitSquareInches.
+  ///
+  /// In en, this message translates to:
+  /// **'Square Inches'**
+  String get unitSquareInches;
+
+  /// No description provided for @unitAcres.
+  ///
+  /// In en, this message translates to:
+  /// **'Acres'**
+  String get unitAcres;
+
+  /// No description provided for @unitHectares.
+  ///
+  /// In en, this message translates to:
+  /// **'Hectares'**
+  String get unitHectares;
+
+  /// No description provided for @unitLiters.
+  ///
+  /// In en, this message translates to:
+  /// **'Liters'**
+  String get unitLiters;
+
+  /// No description provided for @unitGallons.
+  ///
+  /// In en, this message translates to:
+  /// **'Gallons'**
+  String get unitGallons;
+
+  /// No description provided for @unitMilliliters.
+  ///
+  /// In en, this message translates to:
+  /// **'Milliliters'**
+  String get unitMilliliters;
+
+  /// No description provided for @unitCubicMeters.
+  ///
+  /// In en, this message translates to:
+  /// **'Cubic Meters'**
+  String get unitCubicMeters;
+
+  /// No description provided for @unitCubicFeet.
+  ///
+  /// In en, this message translates to:
+  /// **'Cubic Feet'**
+  String get unitCubicFeet;
+
+  /// No description provided for @unitKg.
+  ///
+  /// In en, this message translates to:
+  /// **'Kg'**
+  String get unitKg;
+
+  /// No description provided for @unitPounds.
+  ///
+  /// In en, this message translates to:
+  /// **'Pounds'**
+  String get unitPounds;
+
+  /// No description provided for @unitOunces.
+  ///
+  /// In en, this message translates to:
+  /// **'Ounces'**
+  String get unitOunces;
+
+  /// No description provided for @unitGrams.
+  ///
+  /// In en, this message translates to:
+  /// **'Grams'**
+  String get unitGrams;
+
+  /// No description provided for @unitTons.
+  ///
+  /// In en, this message translates to:
+  /// **'Tons'**
+  String get unitTons;
+
+  /// No description provided for @unitByte.
+  ///
+  /// In en, this message translates to:
+  /// **'Byte'**
+  String get unitByte;
+
+  /// No description provided for @unitBit.
+  ///
+  /// In en, this message translates to:
+  /// **'bit'**
+  String get unitBit;
+
+  /// No description provided for @unitKB.
+  ///
+  /// In en, this message translates to:
+  /// **'KB'**
+  String get unitKB;
+
+  /// No description provided for @unitMB.
+  ///
+  /// In en, this message translates to:
+  /// **'MB'**
+  String get unitMB;
+
+  /// No description provided for @unitGB.
+  ///
+  /// In en, this message translates to:
+  /// **'GB'**
+  String get unitGB;
+
+  /// No description provided for @unitTB.
+  ///
+  /// In en, this message translates to:
+  /// **'TB'**
+  String get unitTB;
+
+  /// No description provided for @unitSecond.
+  ///
+  /// In en, this message translates to:
+  /// **'Second'**
+  String get unitSecond;
+
+  /// No description provided for @unitMinute.
+  ///
+  /// In en, this message translates to:
+  /// **'Minute'**
+  String get unitMinute;
+
+  /// No description provided for @unitHour.
+  ///
+  /// In en, this message translates to:
+  /// **'Hour'**
+  String get unitHour;
+
+  /// No description provided for @unitDay.
+  ///
+  /// In en, this message translates to:
+  /// **'Day'**
+  String get unitDay;
+
+  /// No description provided for @unitWeek.
+  ///
+  /// In en, this message translates to:
+  /// **'Week'**
+  String get unitWeek;
+
+  /// No description provided for @unitYear.
+  ///
+  /// In en, this message translates to:
+  /// **'Year'**
+  String get unitYear;
+
+  /// No description provided for @unitMs.
+  ///
+  /// In en, this message translates to:
+  /// **'m/s'**
+  String get unitMs;
+
+  /// No description provided for @unitKmh.
+  ///
+  /// In en, this message translates to:
+  /// **'km/h'**
+  String get unitKmh;
+
+  /// No description provided for @unitMph.
+  ///
+  /// In en, this message translates to:
+  /// **'mph'**
+  String get unitMph;
+
+  /// No description provided for @unitKnot.
+  ///
+  /// In en, this message translates to:
+  /// **'knot'**
+  String get unitKnot;
+
+  /// No description provided for @unitMach.
+  ///
+  /// In en, this message translates to:
+  /// **'Mach'**
+  String get unitMach;
+
+  /// No description provided for @unitJoule.
+  ///
+  /// In en, this message translates to:
+  /// **'Joule'**
+  String get unitJoule;
+
+  /// No description provided for @unitCalorie.
+  ///
+  /// In en, this message translates to:
+  /// **'Calorie'**
+  String get unitCalorie;
+
+  /// No description provided for @unitKilocalorie.
+  ///
+  /// In en, this message translates to:
+  /// **'Kilocalorie'**
+  String get unitKilocalorie;
+
+  /// No description provided for @unitKWh.
+  ///
+  /// In en, this message translates to:
+  /// **'kWh'**
+  String get unitKWh;
+
+  /// No description provided for @unitPascal.
+  ///
+  /// In en, this message translates to:
+  /// **'Pascal'**
+  String get unitPascal;
+
+  /// No description provided for @unitBar.
+  ///
+  /// In en, this message translates to:
+  /// **'Bar'**
+  String get unitBar;
+
+  /// No description provided for @unitPSI.
+  ///
+  /// In en, this message translates to:
+  /// **'PSI'**
+  String get unitPSI;
+
+  /// No description provided for @unitAtmosphere.
+  ///
+  /// In en, this message translates to:
+  /// **'Atmosphere'**
+  String get unitAtmosphere;
+
+  /// No description provided for @unitDegree.
+  ///
+  /// In en, this message translates to:
+  /// **'Degree'**
+  String get unitDegree;
+
+  /// No description provided for @unitRadian.
+  ///
+  /// In en, this message translates to:
+  /// **'Radian'**
+  String get unitRadian;
+
+  /// No description provided for @unitGradian.
+  ///
+  /// In en, this message translates to:
+  /// **'Gradian'**
+  String get unitGradian;
+
+  /// No description provided for @unitCelsius.
+  ///
+  /// In en, this message translates to:
+  /// **'°C'**
+  String get unitCelsius;
+
+  /// No description provided for @unitFahrenheit.
+  ///
+  /// In en, this message translates to:
+  /// **'°F'**
+  String get unitFahrenheit;
+
+  /// No description provided for @unitKelvin.
+  ///
+  /// In en, this message translates to:
+  /// **'Kelvin'**
+  String get unitKelvin;
+
+  /// No description provided for @unitHEX.
+  ///
+  /// In en, this message translates to:
+  /// **'HEX'**
+  String get unitHEX;
+
+  /// No description provided for @unitRGBA.
+  ///
+  /// In en, this message translates to:
+  /// **'RGB(A)'**
+  String get unitRGBA;
+
+  /// No description provided for @unitHSLA.
+  ///
+  /// In en, this message translates to:
+  /// **'HSL(A)'**
+  String get unitHSLA;
+
+  /// No description provided for @unitHSV.
+  ///
+  /// In en, this message translates to:
+  /// **'HSV'**
+  String get unitHSV;
+
+  /// No description provided for @unitCMYK.
+  ///
+  /// In en, this message translates to:
+  /// **'CMYK'**
+  String get unitCMYK;
 }
 
 class _AppLocalizationsDelegate

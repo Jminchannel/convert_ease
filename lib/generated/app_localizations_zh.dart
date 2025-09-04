@@ -301,6 +301,177 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get useSelectedColor => '使用选中的颜色';
+
+  @override
+  String get unitMeters => '米';
+
+  @override
+  String get unitFeet => '英尺';
+
+  @override
+  String get unitInches => '英寸';
+
+  @override
+  String get unitCentimeters => '厘米';
+
+  @override
+  String get unitYards => '码';
+
+  @override
+  String get unitMiles => '英里';
+
+  @override
+  String get unitSquareMeters => '平方米';
+
+  @override
+  String get unitSquareFeet => '平方英尺';
+
+  @override
+  String get unitSquareInches => '平方英寸';
+
+  @override
+  String get unitAcres => '英亩';
+
+  @override
+  String get unitHectares => '公顷';
+
+  @override
+  String get unitLiters => '升';
+
+  @override
+  String get unitGallons => '加仑';
+
+  @override
+  String get unitMilliliters => '毫升';
+
+  @override
+  String get unitCubicMeters => '立方米';
+
+  @override
+  String get unitCubicFeet => '立方英尺';
+
+  @override
+  String get unitKg => '公斤';
+
+  @override
+  String get unitPounds => '磅';
+
+  @override
+  String get unitOunces => '盎司';
+
+  @override
+  String get unitGrams => '克';
+
+  @override
+  String get unitTons => '吨';
+
+  @override
+  String get unitByte => '字节';
+
+  @override
+  String get unitBit => '位';
+
+  @override
+  String get unitKB => '千字节';
+
+  @override
+  String get unitMB => '兆字节';
+
+  @override
+  String get unitGB => '吉字节';
+
+  @override
+  String get unitTB => '太字节';
+
+  @override
+  String get unitSecond => '秒';
+
+  @override
+  String get unitMinute => '分钟';
+
+  @override
+  String get unitHour => '小时';
+
+  @override
+  String get unitDay => '天';
+
+  @override
+  String get unitWeek => '周';
+
+  @override
+  String get unitYear => '年';
+
+  @override
+  String get unitMs => '米/秒';
+
+  @override
+  String get unitKmh => '千米/小时';
+
+  @override
+  String get unitMph => '英里/小时';
+
+  @override
+  String get unitKnot => '节';
+
+  @override
+  String get unitMach => '马赫';
+
+  @override
+  String get unitJoule => '焦耳';
+
+  @override
+  String get unitCalorie => '卡路里';
+
+  @override
+  String get unitKilocalorie => '千卡';
+
+  @override
+  String get unitKWh => '千瓦时';
+
+  @override
+  String get unitPascal => '帕斯卡';
+
+  @override
+  String get unitBar => '巴';
+
+  @override
+  String get unitPSI => '磅力每平方英寸';
+
+  @override
+  String get unitAtmosphere => '大气压';
+
+  @override
+  String get unitDegree => '度';
+
+  @override
+  String get unitRadian => '弧度';
+
+  @override
+  String get unitGradian => '百分度';
+
+  @override
+  String get unitCelsius => '摄氏度';
+
+  @override
+  String get unitFahrenheit => '华氏度';
+
+  @override
+  String get unitKelvin => '开尔文';
+
+  @override
+  String get unitHEX => '十六进制';
+
+  @override
+  String get unitRGBA => 'RGB(A)';
+
+  @override
+  String get unitHSLA => 'HSL(A)';
+
+  @override
+  String get unitHSV => 'HSV';
+
+  @override
+  String get unitCMYK => 'CMYK';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -600,4 +771,175 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get useSelectedColor => '使用選中的顏色';
+
+  @override
+  String get unitMeters => '公尺';
+
+  @override
+  String get unitFeet => '英尺';
+
+  @override
+  String get unitInches => '英寸';
+
+  @override
+  String get unitCentimeters => '公分';
+
+  @override
+  String get unitYards => '碼';
+
+  @override
+  String get unitMiles => '英里';
+
+  @override
+  String get unitSquareMeters => '平方公尺';
+
+  @override
+  String get unitSquareFeet => '平方英尺';
+
+  @override
+  String get unitSquareInches => '平方英寸';
+
+  @override
+  String get unitAcres => '英畝';
+
+  @override
+  String get unitHectares => '公頃';
+
+  @override
+  String get unitLiters => '公升';
+
+  @override
+  String get unitGallons => '加侖';
+
+  @override
+  String get unitMilliliters => '毫升';
+
+  @override
+  String get unitCubicMeters => '立方公尺';
+
+  @override
+  String get unitCubicFeet => '立方英尺';
+
+  @override
+  String get unitKg => '公斤';
+
+  @override
+  String get unitPounds => '磅';
+
+  @override
+  String get unitOunces => '盎司';
+
+  @override
+  String get unitGrams => '公克';
+
+  @override
+  String get unitTons => '公噸';
+
+  @override
+  String get unitByte => '位元組';
+
+  @override
+  String get unitBit => '位元';
+
+  @override
+  String get unitKB => '千位元組';
+
+  @override
+  String get unitMB => '百萬位元組';
+
+  @override
+  String get unitGB => '十億位元組';
+
+  @override
+  String get unitTB => '兆位元組';
+
+  @override
+  String get unitSecond => '秒';
+
+  @override
+  String get unitMinute => '分鐘';
+
+  @override
+  String get unitHour => '小時';
+
+  @override
+  String get unitDay => '天';
+
+  @override
+  String get unitWeek => '週';
+
+  @override
+  String get unitYear => '年';
+
+  @override
+  String get unitMs => '公尺/秒';
+
+  @override
+  String get unitKmh => '公里/小時';
+
+  @override
+  String get unitMph => '英里/小時';
+
+  @override
+  String get unitKnot => '節';
+
+  @override
+  String get unitMach => '馬赫';
+
+  @override
+  String get unitJoule => '焦耳';
+
+  @override
+  String get unitCalorie => '卡路里';
+
+  @override
+  String get unitKilocalorie => '千卡';
+
+  @override
+  String get unitKWh => '千瓦時';
+
+  @override
+  String get unitPascal => '帕斯卡';
+
+  @override
+  String get unitBar => '巴';
+
+  @override
+  String get unitPSI => '磅力每平方英寸';
+
+  @override
+  String get unitAtmosphere => '大氣壓';
+
+  @override
+  String get unitDegree => '度';
+
+  @override
+  String get unitRadian => '弧度';
+
+  @override
+  String get unitGradian => '百分度';
+
+  @override
+  String get unitCelsius => '攝氏度';
+
+  @override
+  String get unitFahrenheit => '華氏度';
+
+  @override
+  String get unitKelvin => '開爾文';
+
+  @override
+  String get unitHEX => '十六進制';
+
+  @override
+  String get unitRGBA => 'RGB(A)';
+
+  @override
+  String get unitHSLA => 'HSL(A)';
+
+  @override
+  String get unitHSV => 'HSV';
+
+  @override
+  String get unitCMYK => 'CMYK';
 }

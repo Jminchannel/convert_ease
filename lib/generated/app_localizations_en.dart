@@ -304,4 +304,175 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get useSelectedColor => 'Use Selected Color';
+
+  @override
+  String get unitMeters => 'Meters';
+
+  @override
+  String get unitFeet => 'Feet';
+
+  @override
+  String get unitInches => 'Inches';
+
+  @override
+  String get unitCentimeters => 'Centimeters';
+
+  @override
+  String get unitYards => 'Yards';
+
+  @override
+  String get unitMiles => 'Miles';
+
+  @override
+  String get unitSquareMeters => 'Square Meters';
+
+  @override
+  String get unitSquareFeet => 'Square Feet';
+
+  @override
+  String get unitSquareInches => 'Square Inches';
+
+  @override
+  String get unitAcres => 'Acres';
+
+  @override
+  String get unitHectares => 'Hectares';
+
+  @override
+  String get unitLiters => 'Liters';
+
+  @override
+  String get unitGallons => 'Gallons';
+
+  @override
+  String get unitMilliliters => 'Milliliters';
+
+  @override
+  String get unitCubicMeters => 'Cubic Meters';
+
+  @override
+  String get unitCubicFeet => 'Cubic Feet';
+
+  @override
+  String get unitKg => 'Kg';
+
+  @override
+  String get unitPounds => 'Pounds';
+
+  @override
+  String get unitOunces => 'Ounces';
+
+  @override
+  String get unitGrams => 'Grams';
+
+  @override
+  String get unitTons => 'Tons';
+
+  @override
+  String get unitByte => 'Byte';
+
+  @override
+  String get unitBit => 'bit';
+
+  @override
+  String get unitKB => 'KB';
+
+  @override
+  String get unitMB => 'MB';
+
+  @override
+  String get unitGB => 'GB';
+
+  @override
+  String get unitTB => 'TB';
+
+  @override
+  String get unitSecond => 'Second';
+
+  @override
+  String get unitMinute => 'Minute';
+
+  @override
+  String get unitHour => 'Hour';
+
+  @override
+  String get unitDay => 'Day';
+
+  @override
+  String get unitWeek => 'Week';
+
+  @override
+  String get unitYear => 'Year';
+
+  @override
+  String get unitMs => 'm/s';
+
+  @override
+  String get unitKmh => 'km/h';
+
+  @override
+  String get unitMph => 'mph';
+
+  @override
+  String get unitKnot => 'knot';
+
+  @override
+  String get unitMach => 'Mach';
+
+  @override
+  String get unitJoule => 'Joule';
+
+  @override
+  String get unitCalorie => 'Calorie';
+
+  @override
+  String get unitKilocalorie => 'Kilocalorie';
+
+  @override
+  String get unitKWh => 'kWh';
+
+  @override
+  String get unitPascal => 'Pascal';
+
+  @override
+  String get unitBar => 'Bar';
+
+  @override
+  String get unitPSI => 'PSI';
+
+  @override
+  String get unitAtmosphere => 'Atmosphere';
+
+  @override
+  String get unitDegree => 'Degree';
+
+  @override
+  String get unitRadian => 'Radian';
+
+  @override
+  String get unitGradian => 'Gradian';
+
+  @override
+  String get unitCelsius => '°C';
+
+  @override
+  String get unitFahrenheit => '°F';
+
+  @override
+  String get unitKelvin => 'Kelvin';
+
+  @override
+  String get unitHEX => 'HEX';
+
+  @override
+  String get unitRGBA => 'RGB(A)';
+
+  @override
+  String get unitHSLA => 'HSL(A)';
+
+  @override
+  String get unitHSV => 'HSV';
+
+  @override
+  String get unitCMYK => 'CMYK';
 }
